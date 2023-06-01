@@ -7,10 +7,13 @@ límite inicial.
  */
 public class Ej10LimitePositivo {
     public static void main(String[] args) {
-        int num, limite = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un limite positivo"));
+        int suma=0;
+
+        int limite = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un limite positivo"));
         do {
-            num = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
-        }while(num<limite);
+            suma += Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
+
+        }while(suma<limite);
 
     }
 

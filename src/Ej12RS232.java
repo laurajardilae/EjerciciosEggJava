@@ -28,7 +28,7 @@ public class Ej12RS232 {
             } else {
                 incorrectos++;
             }
-        }while (cadena.equals("&&&&&")==false);
+        }while (!cadena.equals("&&&&&"));
         System.out.println("Cadenas correctas: " + correctos);
         System.out.println("Cadenas incorectas: " + incorrectos);
 
