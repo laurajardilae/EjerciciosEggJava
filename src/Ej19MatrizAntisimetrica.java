@@ -6,17 +6,21 @@ denota por AT y se obtiene cambiando sus filas por columnas (o viceversa).
  */
 public class Ej19MatrizAntisimetrica {
     public static void main(String[] args) {
-        int matrix[][]={{6,-2,4},{2,0,2},{-4,-2,0}};
+        int matrix[][] = {{6, -2, 4}, {2, 0, 2}, {-4, -2, 0}};
 
-        boolean esAntisimetrica=true;
+        boolean esAntisimetrica = true;
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (esAntisimetrica) {
-                    if (i != j) {
-                        esAntisimetrica = (matrix[i][j] + matrix[j][i]) == 0;
+                if (i != j) {
+                    esAntisimetrica = (matrix[i][j] + matrix[j][i]) == 0;
+                    if (!esAntisimetrica) {
+                        break;
                     }
                 }
+            }
+            if (!esAntisimetrica) {
+                break;
             }
         }
         System.out.println("La matriz es antisimétrica: " + esAntisimetrica);
