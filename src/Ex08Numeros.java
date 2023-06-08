@@ -14,6 +14,9 @@ public class Ex08Numeros {
             System.out.println("Ingrese un numero");
             num= entrada.nextInt();
             leidos++;
+            if(num<0){
+                continue;
+            }
             if(num%2==0){
                 pares++;
             }else{

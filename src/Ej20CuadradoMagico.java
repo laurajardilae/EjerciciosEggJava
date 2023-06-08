@@ -29,8 +29,9 @@ public class Ej20CuadradoMagico {
             for (int j = 0; j < 3; j++) {
                 do {
                     System.out.format("Ingrese el numero de la posición [%d][%d]: ",i,j);
+                    //System.out.printf();
                     matrix[i][j]= entrada.nextInt();
-                }while(matrix[i][j]<0||9<matrix[i][j]);
+                }while(matrix[i][j]<1||9<matrix[i][j]);
             }
         }
     }
@@ -76,7 +77,7 @@ public class Ej20CuadradoMagico {
     public static boolean sumaDiagonalppal(int matrix[][]) {
         boolean diagonales;
         int suma = 0;
-        for (int j = 0; j < 3; j++) {
+        for (int j = 0; j < 3; j++) { //para sumar diagonales no necesitaria dos for, lo puedo hacer en uno solo que sea i=i
             for (int i = 0; i < 3; i++) {
                 if (i == j) {
                     suma += matrix[i][j];
@@ -90,7 +91,7 @@ public class Ej20CuadradoMagico {
     public static boolean sumaDiagonalsecun(int matrix[][]) {
         boolean diagonales;
         int suma = 0;
-        for (int j = 0; j < 3; j++) {
+        for (int j = 0; j < 3; j++) { //podria ser un solo ciclo que sea [i][3-1-i]
             for (int i = 0; i < 3; i++) {
                 if (i+j==2) {
                     suma += matrix[i][j];
